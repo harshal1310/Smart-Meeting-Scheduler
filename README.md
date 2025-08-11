@@ -21,7 +21,7 @@ The Smart Scheduler uses a sophisticated multi-step algorithm to find the best m
 
 #### 1. Clone the Repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/harshal1310/Smart-Meeting-Scheduler
 cd Smart-Scheduler
 ```
 
@@ -84,7 +84,7 @@ curl http://localhost:8080/api/v1/calendar/user1
 # Expected: JSON response with user's calendar events
 ```
 
-## 🔌 API Endpoints
+##  API Endpoints
 
 ### Base URL
 ```
@@ -161,7 +161,7 @@ GET /api/v1/calendar/{userID}?start=2025-08-09T08:00:00+05:30&end=2025-08-09T18:
 - `409`: Conflict (no available time slots found)
 - `500`: Internal server error
 
-## 🧪 Testing
+##  Testing
 
 ### Running Tests
 
