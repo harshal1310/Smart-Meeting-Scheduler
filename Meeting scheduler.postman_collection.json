@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "c77d8504-727a-4066-9d76-355244997036",
+		"name": "Meeting scheduler",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37201659"
+	},
+	"item": [
+		{
+			"name": "Create Team Meeting",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Weekly Team Sync\",\n  \"userIDs\": [\"user1\", \"user2\"],\n  \"durationMinutes\": 60,\n  \"timeRange\": {\n    \"start\": \"2025-08-10T09:00:00Z\",\n    \"end\": \"2025-08-10T17:00:00Z\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/schedule",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"schedule"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getEvents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/calendar/user3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"calendar",
+						"user3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Daily Standup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Daily Standup\",\n  \"userIDs\": [\"user1\", \"user2\", \"user3\"],\n  \"durationMinutes\": 15,\n  \"timeRange\": {\n    \"start\": \"2025-08-10T09:00:00Z\",\n    \"end\": \"2025-08-10T10:00:00Z\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/schedule",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"schedule"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lunch",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Lunch & Learn: AI Trends\",\n  \"userIDs\": [\"user1\", \"user3\"],\n  \"durationMinutes\": 60,\n  \"timeRange\": {\n    \"start\": \"2025-08-10T12:00:00Z\",\n    \"end\": \"2025-08-10T14:00:00Z\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/schedule",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"schedule"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
